@@ -74,8 +74,6 @@ $(document).ready(function(){
         return re.test(email);
     }
 
-    $('.inp-phone').mask('+7(999)999-99-99');
-
     // фокус поля
     $(document).on('focus', '.inp', function(){
         $(this).removeClass('error');
@@ -119,7 +117,7 @@ $(document).ready(function(){
                         $(this).prop('value','')
                     });
                     $(form).find('.js-form-submit').text(button_value);
-                    $('.js--form-ok').trigger('click')
+                    $(form).find('.js--form-ok').trigger('click')
                 },
                 error: function(data) {
                     $(form).find('.js-form-submit').text('Error');
@@ -145,7 +143,6 @@ $(document).ready(function(){
         var botom_gap = 300;
 
         $(window).scroll(function() {
-            console.log('Log this');
 
             var top = block.offset().top;
             var bottom = block.height() + top + $(window).height()/2;
@@ -192,4 +189,22 @@ $(document).ready(function(){
         }, 400)
       }
     );
+
+     if ($('#map').length) {
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 13
+          });
+
+          var image = $('#map').data('bubble');
+          var beachMarker = new google.maps.Marker({
+            position: {lat: -34.397, lng: 150.644},
+            map: map,
+            icon: image
+          });
+
+        }
+        initMap();
+    }
 })
