@@ -5614,6 +5614,10 @@ _disabled,
     margin-bottom: 20px;
   }
 }
+.index .primary .justifyed {
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
 @media (max-width: 960px) {
   .index .primary .justifyed {
     display: block !important;
@@ -5622,6 +5626,7 @@ _disabled,
 .index .primary aside {
   padding-top: 148px;
   width: 330px;
+  height: auto;
 }
 @media (max-width: 1300px) {
   .index .primary aside {
