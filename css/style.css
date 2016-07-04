@@ -33,6 +33,13 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "HelveticaRegular";
+  src: url("../fnt/Helvetica/HelveticaRegular/HelveticaRegular.eot");
+  src: url("../fnt/Helvetica/HelveticaRegular/HelveticaRegular.eot?#iefix") format("embedded-opentype"), url("../fnt/Helvetica/HelveticaRegular/HelveticaRegular.woff") format("woff"), url("../fnt/Helvetica/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 html * {
   max-height: 999999px;
   -webkit-font-smoothing: antialiased;
@@ -5411,7 +5418,7 @@ _disabled,
   color: #fff;
   font-size: 14px;
   line-height: 16px;
-  font-family: ProximaNovaBold, sans-serif;
+  font-family: HelveticaRegular, sans-serif !important;
 }
 .primary .justifyed aside .aside-nav li a:hover {
   text-decoration: underline;
@@ -5676,6 +5683,7 @@ _disabled,
     margin-right: 0;
     padding: 62px 20px 45px;
     width: 540px;
+    margin-bottom: 20px !important;
   }
 }
 @media (max-width: 960px) {
@@ -5725,6 +5733,11 @@ _disabled,
   padding-bottom: 68px;
   position: relative;
   z-index: 10;
+}
+@media (max-width: 1300px) {
+  .index .doing {
+    padding-top: 20px;
+  }
 }
 @media (max-width: 960px) {
   .index .doing {
